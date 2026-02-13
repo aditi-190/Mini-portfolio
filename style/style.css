@@ -30,7 +30,7 @@ header{
     z-index: 100;
 }
 .logo{
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -38,7 +38,7 @@ header{
 }
 .navbar a{
     display: inline-block;
-    font-size: 18px;
+    font-size: 30px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -65,7 +65,7 @@ header{
     margin-left: -30px;
 }
 .home-content h1{
-    font-size: 56px;
+    font-size: 60px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -78,19 +78,26 @@ header{
     animation: gradientMove 5s ease infinite;
 }
 .home-content h3{
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 700;
 }
 .home-content p{
-    font-size: 20px;
+    font-size: 28px;
 }
-.home-sci{
-    position: absolute;
-    left: 70px;        /* কতটা পাশে থাকবে */
+/*.home-sci{
+   /* position: absolute;
+    left: 70px;     
     top: 50%;
+    
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+}
+.home-sci{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 .home-sci a{
     display: flex;
@@ -103,12 +110,44 @@ header{
     font-size: 20px;
     color: #fff;
     text-decoration: none;
-    margin: 20px 0;
+    /*margin: 20px 0;
 
       transform: translateX(-100px);
     opacity: 0;
     animation: slideRight .6s ease forwards;
 
+}*/
+.home-sci{
+    display: flex;
+    justify-content: flex-start; 
+    gap: 90px;               
+    margin-top: 50px;
+
+}
+
+/* icon size বড় করা */
+.home-sci a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;            
+    height: 55px;
+    font-size: 24px;      
+    background: linear-gradient(45deg,#f06,#3cf);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: slideRight .6s ease forwards;
+
+
+}
+
+.home-sci a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #f06;
 }
 .home-sci a:nth-child(1){ animation-delay: .1s; }
 .home-sci a:nth-child(2){ animation-delay: .3s; }
@@ -125,10 +164,10 @@ header{
     z-index: -1;
     transition: .5s ease;
 }
-.home-sci a:hover{
+/*.home-sci a:hover{
     transform: scale(1.15);
     box-shadow: 0 0 15px #f06;
-}
+}*/
 .home-sci a:hover::before{
     filter: blur(5px);
 }
@@ -229,4 +268,96 @@ filter: blur(10px);
 @keyframes rotateRing {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    header{
+        padding: 15px 5%;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .navbar{
+        display: flex;
+        gap: 15px;
+    }
+
+    .navbar a{
+        margin-left: 0;
+        font-size: 15px;
+    }
+
+    /* HERO SECTION */
+    .home{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        padding: 120px 5% 40px;
+    }
+
+    .home-content{
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .home-content h1{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .home-content p{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    /* IMAGE SIZE SMALL */
+    .home-img{
+        width: 260px;
+        height: 260px;
+        margin-bottom: 25px;
+    }
+
+    .home-img .glowing-circle::after{
+        width: 230px;
+        height: 230px;
+    }
+
+    .glowing-circle .image{
+        width: 230px;
+        height: 230px;
+    }
+
+    .image img{
+        max-width: 200px;
+        top: 0;
+    }
+
+    /* SOCIAL ICON CENTER */
+    @media (max-width: 768px){
+
+    .home-sci{
+        position: static;        /* absolute বন্ধ */
+        display: flex;
+        flex-direction: row;     /* column → row */
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        transform: none;
+    }
+
+    .home-sci a{
+        margin: 0 10px;
+    }
+
+}
 }
