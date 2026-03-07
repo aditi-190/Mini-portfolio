@@ -12,14 +12,16 @@
 </head>
 <body>
     <header>
-    <a href="#" class="logo">Portfolio</a>
+    <!--<a href="#" class="logo">Portfolio</a> !-->
     <nav class="navbar">
-        <a href="#" >Home</a>
-        <a href="#">About</a>
-        <a href="contact.html" class="active">Contact</a>
+        <a href="#home"  class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
     </header>
-    <section class="home">
+    <section class="home" id="home">
      <!-- <div class="home-sci">
         <a href="https://www.facebook.com/share/1AY5rtmsBW/" ><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.linkedin.com/in/auditi-sinha-8b4254294/"><i class="fa-brands fa-linkedin"></i></a>
@@ -33,11 +35,13 @@ Currently, I am improving my skills in HTML, CSS, JavaScript and working on real
 I enjoy learning new technologies and solving problems through code. My goal is to become a professional full-stack developer.
 When I'm not coding, I like exploring design ideas and improving my development skills.</p>
 
-<div class="home-sci">
+   <a href="#contact" class="btn-contact">Contact Me</a>
+
+<!--<div class="home-sci">
         <a href="https://www.facebook.com/share/1AY5rtmsBW/" ><i class="fa-brands fa-facebook"></i></a>
         <a href="https://www.linkedin.com/in/auditi-sinha-8b4254294/"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/aditi-190"><i class="fa-brands fa-github"></i></a>
-      </div>
+      </div> !-->
 
       </div>
       <div class="home-img">
@@ -45,11 +49,113 @@ When I'm not coding, I like exploring design ideas and improving my development 
           <span></span>
           <span></span>
           <div class="image">
-            <img src="image/auditi-removebg-preview.png" alt="">
+            <img src="image/auditi-profile (1).png" alt="">
           </div>
         </div>
       </div>
+    
     </section>
+
+     <!-- Skills Section -->
+<section id="skills" class="skills">
+  <h2>My Skills</h2>
+  <div class="skills-container">
+    <div class="skill-box">
+      <i class="fab fa-html5"></i>
+      <p>HTML</p>
+    </div>
+    <div class="skill-box">
+      <i class="fab fa-css3-alt"></i>
+      <p>CSS</p>
+    </div>
+    <div class="skill-box">
+      <i class="fab fa-js-square"></i>
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-code"></i>
+      <p>C</p>
+    </div>
+    <div class="skill-box">
+      <i class="fas fa-code-branch"></i>
+      <p>C++</p>
+    </div>
+  </div>
+</section>
+
+<!--<section class="contact-section">
+        <h1>Contact Me</h1>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Your Address">
+
+                <button type="submit">submit</button>
+            </form>
+        </div>
+    </section>!-->
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  
+  <h1>Let's Connect</h1>
+  <p>Have a question or want to collaborate? I'd love to hear from you!</p>
+
+  <!-- Container for form + social icons -->
+  <div class="contact-container">
+    
+  <div class="contact-form">
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Your Address">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+   <!-- Social Links -->
+    <div class="contact-social">
+        <!-- GitHub -->
+  <a href="https://github.com/aditi-190" target="_blank" class="social-card">
+    <i class="fab fa-github"></i>
+    <p>GitHub</p>
+  </a>
+      <!-- Facebook -->
+  <a href="https://www.facebook.com/share/1AY5rtmsBW/" target="_blank" class="social-card">
+    <i class="fab fa-facebook"></i>
+    <p>Facebook</p>
+  </a>
+<!-- Instagram -->
+<a href="https://www.instagram.com/_auditisinha381_/" target="_blank" class="social-card">
+  <i class="fab fa-instagram"></i>
+  <p>Instagram</p>
+</a>
+       <!-- Discord -->
+  <a href="https://discord.com/users/https://discord.gg/mysszZGR" target="_blank" class="social-card">
+    <i class="fab fa-discord"></i>
+    <p>Discord</p>
+  </a>
+    </div>
+  </div>
+</section>
   
 </body>
 </html>
