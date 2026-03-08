@@ -36,6 +36,18 @@ header{
     font-weight: 600;
     pointer-events: none;
 }
+/*nav section */
+#check {
+    display: none;
+}
+
+/* Desktop e menu icon thakbe na */
+#menu-icon {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
 .navbar a{
     display: inline-block;
     font-size: 30px;
@@ -84,39 +96,7 @@ header{
 .home-content p{
     font-size: 28px;
 }
-/*.home-sci{
-   /* position: absolute;
-    left: 70px;     
-    top: 50%;
-    
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-}
-.home-sci{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-.home-sci a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(45deg,#f06,#3cf);
-    border-radius: 50%;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    /*margin: 20px 0;
 
-      transform: translateX(-100px);
-    opacity: 0;
-    animation: slideRight .6s ease forwards;
-
-}*/
 .home-sci{
     display: flex;
     justify-content: flex-start; 
@@ -125,7 +105,6 @@ header{
 
 }
 
-/* icon size বড় করা */
 .home-sci a{
     display: flex;
     justify-content: center;
@@ -164,10 +143,7 @@ header{
     z-index: -1;
     transition: .5s ease;
 }
-/*.home-sci a:hover{
-    transform: scale(1.15);
-    box-shadow: 0 0 15px #f06;
-}*/
+
 .home-sci a:hover::before{
     filter: blur(5px);
 }
@@ -487,13 +463,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hide Hero when #skills is targeted */
 #skills:target ~ #hero,
 #skills:target + #hero {
   display: none;
 }
 
-/* Alternative (works better): hide hero when any other section is targeted */
 #hero {
   transition: opacity 0.5s;
 }
@@ -506,10 +480,133 @@ html {
   pointer-events: none;
 }
 
-/* Optional: show skills normally */
+
 #skills {
   display: block;
 }
+
+
+/*project section*/
+
+.projects-section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg,#f06,#3cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.projects-section {
+    padding: 100px 10%;
+    background: #0c1022;
+    text-align: center;
+}
+
+.projects-header {
+    margin-bottom: 60px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* ৪টি প্রজেক্টের জন্য গ্রিড */
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    transition: 0.4s ease;
+    border-top: 5px solid transparent; /* টপ বর্ডার এর জন্য */
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Theme Colors */
+.purple-theme { border-top-color: #a855f7; }
+.green-theme { border-top-color: #10b981; }
+.blue-theme { border-top-color: #3b82f6; }
+.orange-theme { border-top-color: #f59e0b; }
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Icon Colors */
+.purple-theme .project-icon { background: rgba(168, 85, 247, 0.1); color: #a855f7; }
+.green-theme .project-icon { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.blue-theme .project-icon { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+.orange-theme .project-icon { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+
+.project-card h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.project-card p {
+    font-size: 18px;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Tags Styles */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px; /* Duita button er moddhe gap set korbe */
+  margin-top: 15px;
+}
+
+.project-links a {
+  text-decoration: none;
+  color: white; /* Text color white korbe */
+  border: 1px solid white; /* Button shape er jonno border */
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Icon ebong text er moddhe gap */
+  transition: 0.3s;
+}
+
+/* Hover effect: jate mouse nile button ta aktu highlight hoy */
+.project-links a:hover {
+  background-color: white;
+  color: black;
+}
+
 /*contact button*/
 .btn-contact {
     display: inline-block;
@@ -608,15 +705,6 @@ html {
   transform: scale(1.05);
 }
 
-/* Social Links 
-.contact-social {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  flex: 0.5;
-  min-width: 200px;
-}*/
 .contact-social {
   display: flex;
   flex-direction: column;
@@ -662,6 +750,13 @@ html {
 }
 
 /* Responsive */
+
+/* Responsive project section */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* Responsive for About Section */
 @media (max-width: 992px) {
@@ -722,6 +817,42 @@ html {
 }
 
 /* MOBILE RESPONSIVE */
+
+/* Mobile View (768px er niche) */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Mobile e icon dekhabe */
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0c1022;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: none; /* Default e hidden */
+        flex-direction: column;
+        padding: 20px 10%;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 20px;
+        margin: 15px 0;
+        margin-left: 0; /* Alignment thik korar jonno */
+    }
+
+    /* MAGIC PART: Checkbox check hole navbar dekhabe */
+    #check:checked ~ .navbar {
+        display: flex;
+    }
+    
+    /* Icon ke 'X' e porinot korar simple logic (optional) */
+    #check:checked ~ #menu-icon i::before {
+        content: "\f00d"; /* FontAwesome er 'X' icon code */
+    }
+}
 
 @media (max-width: 768px){
 
